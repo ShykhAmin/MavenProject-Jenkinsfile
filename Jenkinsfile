@@ -34,7 +34,9 @@ pipeline{
         stage("Deploy on Prod"){
             
             input {
-                cancel: 'Nope', message: 'Should we deploy this project on production server?', ok: 'Sure'
+                cancel "Nope"
+                message "Should we deploy this project on production server?"
+                ok "Sure"
             }
             steps{
                 // deploy on container -> plugin
