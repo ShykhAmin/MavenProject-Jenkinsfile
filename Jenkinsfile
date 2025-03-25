@@ -34,7 +34,6 @@ pipeline{
         stage("Deploy on Prod"){
             
             input {
-                cancel "Nope"
                 message "Should we deploy this project on production server?"
                 ok "Sure"
             }
